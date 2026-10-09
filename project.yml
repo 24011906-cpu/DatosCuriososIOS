@@ -1,19 +1,30 @@
 
 name: DatosCuriososIOS
+
 options:
   bundleIdPrefix: com.estudiante
+
+settings:
+  base:
+    GENERATE_INFOPLIST_FILE: YES
+
 targets:
   DatosCuriososIOS:
     type: application
     platform: iOS
     deploymentTarget: "15.0"
+
     sources:
-      - path: .
-        excludes:
-          - project.yml
-          - .github
+      - path: AppDelegate.h
+      - path: AppDelegate.m
+      - path: ViewController.h
+      - path: ViewController.m
+      - path: main.m
+
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.estudiante.DatosCuriososIOS
-        SWIFT_VERSION: "5.0"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
         TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: ""
