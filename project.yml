@@ -1,0 +1,19 @@
+
+name: DatosCuriososIOS
+options:
+  bundleIdPrefix: com.estudiante
+targets:
+  DatosCuriososIOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: .
+        excludes:
+          - project.yml
+          - .github
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.estudiante.DatosCuriososIOS
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
