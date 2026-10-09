@@ -28,5 +28,12 @@ jobs:
             -scheme DatosCuriososIOS \
             -sdk iphonesimulator \
             -configuration Debug \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             build
+
+      - name: Guardar archivo APP
+        uses: actions/upload-artifact@v4
+        with:
+          name: DatosCuriososIOS-app
+          path: build/Build/Products/Debug-iphonesimulator/DatosCuriososIOS.app
